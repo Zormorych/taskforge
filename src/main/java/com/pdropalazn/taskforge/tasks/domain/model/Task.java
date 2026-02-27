@@ -24,7 +24,7 @@ public class Task {
         this.title = title;
         this.description = description;
 
-        this.status = TaskStatus.ToDo;
+        this.status = TaskStatus.TO_DO;
         this.priority = priority;
         this.dateTime = dateTime;
         this.userAssignedId = userAssignedId;
@@ -63,4 +63,27 @@ public class Task {
     }
 
 
+    public void changeTitle(String newTitle){
+        this.title = newTitle;
+    }
+
+    public void changeDescription(String newDescription){
+        this.description = newDescription;
+    }
+
+    public void changeStatus(TaskStatus newStatus){
+        this.status = newStatus;
+    }
+
+    public void changePriority(TaskPriority newPriority){
+        this.priority = newPriority;
+    }
+
+    public void assignToUser(UUID userAssignedId){
+        this.userAssignedId = userAssignedId;
+    }
+
+
 }
+
+
