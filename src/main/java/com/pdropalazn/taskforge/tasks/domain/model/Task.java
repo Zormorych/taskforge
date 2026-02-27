@@ -9,7 +9,7 @@ import java.util.UUID;
 
 public class Task {
 
-    private final UUID id;
+    private final UUID taskId;
     private final UUID projectId;
     private TaskTitle title;
     private TaskDescription description;
@@ -22,7 +22,7 @@ public class Task {
                 TaskDescription description, TaskPriority priority,
                 LocalDateTime dateTime, UserId userAssignedId){
 
-        this.id = id;
+        this.taskId = id;
         this.projectId = projectId;
         this.title = title;
         this.description = description;
@@ -34,8 +34,8 @@ public class Task {
 
     }
 
-    public UUID getId() {
-        return id;
+    public UUID getTaskId() {
+        return taskId;
     }
 
     public UUID getProjectId() {
