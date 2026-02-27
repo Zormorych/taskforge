@@ -1,5 +1,9 @@
 package com.pdropalazn.taskforge.tasks.domain.model;
 
+import com.pdropalazn.taskforge.identity.domain.model.vo.UserId;
+import com.pdropalazn.taskforge.tasks.domain.model.vo.TaskDescription;
+import com.pdropalazn.taskforge.tasks.domain.model.vo.TaskTitle;
+
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -7,17 +11,16 @@ public class Task {
 
     private final UUID id;
     private final UUID projectId;
-    private String title;
-    private String description;
+    private TaskTitle title;
+    private TaskDescription description;
     private TaskStatus status;
     private TaskPriority priority;
     private LocalDateTime dateTime;
-    private UUID userAssignedId;
+    private UserId userAssignedId;
 
-    public Task(UUID id, UUID projectId, String title,
-                String description,
-                TaskStatus status, TaskPriority priority,
-                LocalDateTime dateTime, UUID userAssignedId){
+    public Task(UUID id, UUID projectId, TaskTitle title,
+                TaskDescription description, TaskPriority priority,
+                LocalDateTime dateTime, UserId userAssignedId){
 
         this.id = id;
         this.projectId = projectId;
@@ -28,6 +31,7 @@ public class Task {
         this.priority = priority;
         this.dateTime = dateTime;
         this.userAssignedId = userAssignedId;
+
     }
 
     public UUID getId() {
@@ -38,11 +42,11 @@ public class Task {
         return projectId;
     }
 
-    public String getTitle() {
+    public TaskTitle getTitle() {
         return title;
     }
 
-    public String getDescription() {
+    public TaskDescription getDescription() {
         return description;
     }
 
@@ -58,16 +62,16 @@ public class Task {
         return dateTime;
     }
 
-    public UUID getUserAssignedId() {
+    public UserId getUserAssignedId() {
         return userAssignedId;
     }
 
 
-    public void changeTitle(String newTitle){
+    public void changeTitle(TaskTitle newTitle){
         this.title = newTitle;
     }
 
-    public void changeDescription(String newDescription){
+    public void changeDescription(TaskDescription newDescription){
         this.description = newDescription;
     }
 
@@ -79,7 +83,7 @@ public class Task {
         this.priority = newPriority;
     }
 
-    public void assignToUser(UUID userAssignedId){
+    public void assignToUser(UserId userAssignedId){
         this.userAssignedId = userAssignedId;
     }
 
