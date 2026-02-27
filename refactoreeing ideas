@@ -2,4 +2,6 @@ Ideas de refactorizacion que se me ocurran:
 
 - En las reglas de dominio (EN PRINCIPIO TASK Y DESCRIPTION) no hardcodear la longitud maxima y minima y alojar la cantidad en una variable
 - Enn TaskRepository puedo utilizar VO TaskId en vez de utilizar UUID directamente, más DDD
--
+
+
+- En dominio, entidad Task metodo TaskId create tal vez deberia generar el UUID fuera
