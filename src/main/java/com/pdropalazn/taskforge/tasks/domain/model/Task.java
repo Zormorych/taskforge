@@ -37,11 +37,12 @@ public class Task {
     }
 
     //por ahora se aloja aqui la unica forma de crear una Tarea (y de generar un nuevo UUID con dicha tarea recien creada)
-    private static Task create(UUID projectId, TaskTitle title,
+    public static Task create(UUID projectId, TaskTitle title,
                               TaskDescription description, TaskPriority priority,
                               LocalDateTime dateTime, UserId userAssignedId) {
 
-        return new Task(TaskId.generate(), projectId, title, description, priority, dateTime, userAssignedId);
+        return new Task(TaskId.generate(), projectId, title,
+                description, priority, dateTime, userAssignedId);
     }
 
     public TaskId getTaskId() {

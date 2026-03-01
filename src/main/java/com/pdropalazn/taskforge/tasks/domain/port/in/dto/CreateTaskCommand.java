@@ -1,4 +1,4 @@
-package com.pdropalazn.taskforge.tasks.application.dto;
+package com.pdropalazn.taskforge.tasks.domain.port.in.dto;
 
 
 import com.pdropalazn.taskforge.identity.domain.model.vo.UserId;
