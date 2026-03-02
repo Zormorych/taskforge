@@ -11,11 +11,11 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 //command/dto se encarga de gestionar la entrada del caso de uso
+//aqui no viaja taskId porque eso lo gestiona el dominio
 public record CreateTaskCommand(
         UUID projectId,
         TaskTitle title,
         TaskDescription description,
-        TaskStatus status,
         TaskPriority priority,
         LocalDateTime dateTime,
         UserId assigneeId
