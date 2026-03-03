@@ -27,9 +27,5 @@ public class InMemoryTaskRepositoryAdapter implements TaskRepositoryPort {
         return Optional.ofNullable(temporalStorage.get(taskId));
     }
 
-    @Override
-    public Optional<Task> findById(TaskId taskId) {
-        return Optional.ofNullable(temporalStorage.get(taskId));
-    }
 
 }
