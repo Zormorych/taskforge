@@ -7,6 +7,7 @@ import com.pdropalazn.taskforge.tasks.domain.port.out.TaskRepositoryPort;
 import org.springframework.stereotype.Repository;
 
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 //servirá para inyectar TaskRepositoryPort sin JPA aún
@@ -20,6 +21,10 @@ public class InMemoryTaskRepositoryAdapter implements TaskRepositoryPort {
     public Task save (Task task){
         temporalStorage.put(task.getTaskId(),task);
         return task;
+    }
+    @Override
+    public Optional<Task> findById(TaskId taskId) {
+        return Optional.ofNullable(temporalStorage.get(taskId));
     }
 
 }

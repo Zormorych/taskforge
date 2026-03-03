@@ -43,8 +43,10 @@ public class CreateTaskInMemoryController {
 
     @GetMapping("/{taskId}")
     public ResponseEntity<TaskResponse> getTaskById(@PathVariable String taskId) {
-        return inMemoryTaskRepository.findById(TaskId.from(taskId))
-                .map(task -> ResponseEntity.ok(toResponse(task)))
+        return taskRepository.findById(TaskId.from(taskId))
+                .map(task -> {
+                    return ResponseEntity.ok(toResponse(task));
+                })
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
