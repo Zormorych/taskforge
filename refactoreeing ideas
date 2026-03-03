@@ -7,6 +7,13 @@ Ideas de refactorizacion que se me ocurran:
 - En dominio, entidad Task metodo TaskId create tal vez deberia generar el UUID fuera
 - He puesto el metodo  crate la entidad task para obligar a que Task siempre se cree desde con las reglas definidas en dominio
 
-
+------------------------------------------------
 IDEAS CASOS DE USO
 ChangeTaskStatus
+-----------------------------------
+TENGO QUE AÑADIR
+ResourceNotFoundException al service por si falla
+
+En TaskRepositoryPort
+
+añadir GetTaskByIdUseCase
