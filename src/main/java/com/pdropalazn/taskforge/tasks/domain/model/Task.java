@@ -41,6 +41,16 @@ public class Task {
                               TaskDescription description, TaskPriority priority,
                               LocalDateTime dateTime, UserId userAssignedId) {
 
+        if (projectId == null) {
+            throw new IllegalArgumentException("Project id cannot be null");
+        }
+        if (priority == null) {
+            throw new IllegalArgumentException("Priority cannot be null");
+        }
+        if (dateTime == null) {
+            throw new IllegalArgumentException("Task dateTime cannot be null");
+        }
+
         return new Task(TaskId.generate(), projectId, title,
                 description, priority, dateTime, userAssignedId);
     }
