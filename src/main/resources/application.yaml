@@ -1,5 +1,10 @@
 spring:
   application:
     name: taskforge
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
 server:
   port: 8080
+
