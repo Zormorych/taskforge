@@ -10,6 +10,7 @@ Ideas de refactorizacion que se me ocurran:
 ------------------------------------------------
 IDEAS CASOS DE USO
 ChangeTaskStatus
+
 -----------------------------------
 TENGO QUE AÑADIR
 ResourceNotFoundException al service por si falla
@@ -22,3 +23,6 @@ añadir GetTaskByIdUseCase
 tengo que añadir mapper dedicados para evitar mapper manual en controller
 
 manejo global de excepciones de dominio
+
+------------------------
+tengo que añadir GetAll

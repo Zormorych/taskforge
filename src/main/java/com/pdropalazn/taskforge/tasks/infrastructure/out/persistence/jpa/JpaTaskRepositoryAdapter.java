@@ -8,9 +8,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-/**
- * Placeholder de persistencia para una futura implementación con Spring Data JPA.
- * Se activa únicamente con el perfil "jpa" para no interferir con el adaptador in-memory.
+/*
+  Placeholder de persistencia para una futura implementacion d Spring Data JPA
+  Se activa unicamente con el perfil "jpa" para no interferir con el adaptador in-memory
  */
 @Repository
 @Profile("jpa")
