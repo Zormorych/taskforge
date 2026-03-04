@@ -13,7 +13,7 @@ public record TaskResponse(
         String description,
         TaskStatus status,
         TaskPriority priority,
-        LocalDateTime dateTime,
+        LocalDateTime dueDate,
         UUID userAssignedId
 ) {
 }

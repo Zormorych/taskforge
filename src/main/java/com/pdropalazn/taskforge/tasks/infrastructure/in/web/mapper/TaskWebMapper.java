@@ -18,7 +18,7 @@ public class TaskWebMapper {
                 new TaskTitle(request.title()),
                 request.description() == null ? null : new TaskDescription(request.description()),
                 request.priority(),
-                request.dateTime(),
+                request.dueDate(),
                 request.assigneeId() == null ? null : new UserId(request.assigneeId())
         );
     }

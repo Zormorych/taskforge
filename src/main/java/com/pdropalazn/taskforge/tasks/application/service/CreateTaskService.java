@@ -24,7 +24,7 @@ public class CreateTaskService implements CreateTaskUseCase {
                 command.title(),
                 command.description(),
                 command.priority(),
-                command.dueTime(),
+                command.dueDate(),
                 command.assigneeId()
         );
     return taskRepository.save(task);

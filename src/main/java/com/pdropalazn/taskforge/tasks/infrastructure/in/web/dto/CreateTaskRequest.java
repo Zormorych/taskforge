@@ -8,12 +8,13 @@ import jakarta.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+//esta es la tarea que va al postman
 public record CreateTaskRequest(
         @NotNull UUID projectId,
         @NotBlank @Size(min = 3, max = 200) String title,
         @Size(max = 1000) String description,
         @NotNull TaskPriority priority,
-        @NotNull LocalDateTime dateTime,
+        LocalDateTime dueDate,
         UUID assigneeId
 ) {
 }
