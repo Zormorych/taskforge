@@ -10,6 +10,7 @@ import java.util.UUID;
 
 import static org.hibernate.validator.internal.util.Contracts.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class TaskTest {
@@ -31,6 +32,24 @@ public class TaskTest {
         assertEquals(TaskStatus.TO_DO, task.getStatus());
     }
 
+    @Test
+    void shouldThrowExceptionWhenProjectIdIsNull(){
+    //Arrange (preparacion)
+        UUID projectId = null;
+        TaskTitle title = new TaskTitle("Not a happy path Test");
+        TaskDescription description = new TaskDescription("This is also to practice JUnit,,,");
+        TaskPriority priority = TaskPriority.MEDIUM;
+        LocalDateTime dueDate = LocalDateTime.of(2026, 4, 11, 19, 15);
+        UserId userAssignedId = new UserId(UUID.randomUUID());
+    //Act (Ejecución) + Assert (Verificación)
+        assertThrows(IllegalArgumentException.class, () -> {
+            Task.create(projectId, title, description, priority, dueDate, userAssignedId);
+        });
+    }
 
+    @Test
+    void shouldThrowExceptionWhenPriorityIsNull(){}
 
+    @Test
+    void shouldChangeStatus(){}
 }
