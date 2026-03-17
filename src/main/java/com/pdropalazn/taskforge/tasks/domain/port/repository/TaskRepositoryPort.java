@@ -1,4 +1,4 @@
-package com.pdropalazn.taskforge.tasks.domain.port.out;
+package com.pdropalazn.taskforge.tasks.domain.port.repository;
 
 import com.pdropalazn.taskforge.tasks.domain.model.Task;
 import com.pdropalazn.taskforge.tasks.domain.model.vo.TaskId;

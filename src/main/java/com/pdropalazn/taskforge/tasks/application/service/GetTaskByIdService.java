@@ -4,7 +4,7 @@ import com.pdropalazn.taskforge.tasks.domain.exception.ResourceNotFoundException
 import com.pdropalazn.taskforge.tasks.domain.model.Task;
 import com.pdropalazn.taskforge.tasks.domain.model.vo.TaskId;
 import com.pdropalazn.taskforge.tasks.domain.port.in.GetTaskByIdUseCase;
-import com.pdropalazn.taskforge.tasks.domain.port.out.TaskRepositoryPort;
+import com.pdropalazn.taskforge.tasks.domain.port.repository.TaskRepositoryPort;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -3,7 +3,7 @@ package com.pdropalazn.taskforge.tasks.application.service;
 import com.pdropalazn.taskforge.tasks.domain.model.Task;
 import com.pdropalazn.taskforge.tasks.domain.port.in.CreateTaskUseCase;
 import com.pdropalazn.taskforge.tasks.application.usecase.port.dto.CreateTaskCommand;
-import com.pdropalazn.taskforge.tasks.domain.port.out.TaskRepositoryPort;
+import com.pdropalazn.taskforge.tasks.domain.port.repository.TaskRepositoryPort;
 import org.springframework.stereotype.Service;
 
 

@@ -58,8 +58,8 @@ public class TaskTest {
     void shouldThrowExceptionWhenPriorityIsNull(){
     //Arrange(preparación)
         UUID projectId = UUID.randomUUID();
-        TaskTitle title = new TaskTitle("Not a happy path Test");
-        TaskDescription description = new TaskDescription("This is also to practice JUnit,,,");
+        TaskTitle title = new TaskTitle("Clean my bathroom");
+        TaskDescription description = new TaskDescription("also the corners and tidy,,,");
         TaskPriority priority = null;
         LocalDateTime dueDate = LocalDateTime.of(2026, 4, 11, 19, 15);
         UserId userAssignedId = new UserId(UUID.randomUUID());

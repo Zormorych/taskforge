@@ -2,7 +2,7 @@ package com.pdropalazn.taskforge.tasks.infrastructure.out.persistence.jpa;
 
 import com.pdropalazn.taskforge.tasks.domain.model.Task;
 import com.pdropalazn.taskforge.tasks.domain.model.vo.TaskId;
-import com.pdropalazn.taskforge.tasks.domain.port.out.TaskRepositoryPort;
+import com.pdropalazn.taskforge.tasks.domain.port.repository.TaskRepositoryPort;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
