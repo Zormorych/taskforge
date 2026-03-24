@@ -20,14 +20,15 @@ public class TaskEntity {
     @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false)
+    @Column(length = 1000)
     private String description;
+
+    @Enumerated(EnumType.STRING)
+    private TaskStatus status;
 
     @Enumerated(EnumType.STRING)
     private TaskPriority priority;
 
-    @Enumerated(EnumType.STRING)
-    private TaskStatus status;
 
     @Column(name = "due_date")
     private LocalDateTime dueDate;
@@ -37,6 +38,19 @@ public class TaskEntity {
 
     protected TaskEntity() {
         //JPA necesit constructor vacio
+    }
+
+    public TaskEntity(UUID id, UUID projectId, String title, String description,
+                      TaskStatus status, TaskPriority priority,
+                      LocalDateTime dueDate, UUID assigneeId) {
+        this.id = id;
+        this.projectId = projectId;
+        this.title = title;
+        this.description = description;
+        this.status = status;
+        this.priority = priority;
+        this.dueDate = dueDate;
+        this.assigneeId = assigneeId;
     }
 
     public UUID getId() {
@@ -71,35 +85,5 @@ public class TaskEntity {
         return assigneeId;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public void setProjectId(UUID projectId) {
-        this.projectId = projectId;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setPriority(TaskPriority priority) {
-        this.priority = priority;
-    }
-
-    public void setStatus(TaskStatus status) {
-        this.status = status;
-    }
-
-    public void setDueDate(LocalDateTime dueDate) {
-        this.dueDate = dueDate;
-    }
-
-    public void setAssigneeId(UUID assigneeId) {
-        this.assigneeId = assigneeId;
-    }
+    // setters
 }

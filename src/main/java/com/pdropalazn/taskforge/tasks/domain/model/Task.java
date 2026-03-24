@@ -20,11 +20,11 @@ public class Task {
     private UserId userAssignedId;
 
 
-    private Task(TaskId id, UUID projectId, TaskTitle title,
+    private Task(TaskId taskId, UUID projectId, TaskTitle title,
                  TaskDescription description, TaskPriority priority,
                  LocalDateTime dueDate, UserId userAssignedId){
 
-        this.taskId = id;
+        this.taskId = taskId;
         this.projectId = projectId;
         this.title = title;
         this.description = description;
@@ -106,5 +106,14 @@ public class Task {
     }
 
 
+    //Static Factory de reconstruccion de tarea para el mapper de persistencia
+
+    public static Task reconstructTask (TaskId taskId, UUID projectId, TaskTitle title,
+                                    TaskDescription description,TaskStatus status, TaskPriority priority,
+                                    LocalDateTime dueDate, UserId userAssignedId) {
+        Task task = new Task(taskId, projectId, title, description, priority, dueDate, userAssignedId);
+        task.changeStatus(status);
+        return task;
+    }
 }
 

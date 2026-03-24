@@ -20,6 +20,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -50,9 +51,25 @@ class GetTaskByIdServiceTest  {
 
         //ACT
         Task result = getTaskByIdService.getById(taskId);
-        //ASSET
+        //ASSErT
         assertEquals(expectedTask, result);
         verify(taskRepositoryPort).findById(taskId);
     }
 
+    @Test
+    void shouldThrowExceptionWhenTaskDoesNotExist(){
+
+
+        // Arrange
+        TaskId taskId = new TaskId(UUID.randomUUID());
+
+        when(taskRepositoryPort.findById(taskId))
+                .thenReturn(Optional.empty());
+
+        // Act y Assert
+        assertThrows(RuntimeException.class,
+                () -> getTaskByIdService.getById(taskId));
+
+        verify(taskRepositoryPort).findById(taskId);
+    }
 }
