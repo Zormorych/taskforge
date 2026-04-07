@@ -9,6 +9,7 @@ import com.pdropalazn.taskforge.tasks.infrastructure.out.persistence.jpa.reposit
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 /*
@@ -34,6 +35,14 @@ public class JpaTaskRepositoryAdapter implements TaskRepositoryPort {
         TaskEntity entity = taskJpaMapper.toEntity(task);
         TaskEntity savedTaskEntity = springDataTaskRepository.save(entity);
         return taskJpaMapper.toDomain(savedTaskEntity);
+    }
+
+    @Override
+    public List<Task> findAll() {
+        // GetAllTasks: maps every persisted TaskEntity back to the domain model
+        return springDataTaskRepository.findAll().stream()
+                .map(taskJpaMapper::toDomain)
+                .toList();
     }
 
     @Override

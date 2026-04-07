@@ -3,6 +3,7 @@ package com.pdropalazn.taskforge.tasks.domain.port.repository;
 import com.pdropalazn.taskforge.tasks.domain.model.Task;
 import com.pdropalazn.taskforge.tasks.domain.model.vo.TaskId;
 
+import java.util.List;
 import java.util.Optional;
 
 //TaskRepositoryPort es el contrato que luego implemntará la infraestructura
@@ -10,6 +11,9 @@ import java.util.Optional;
 public interface TaskRepositoryPort {
 
     Task save (Task task);
+
+    // GetAllTasks: exposes task listing without coupling domain to persistence details
+    List<Task> findAll();
 
     Optional<Task> findById(TaskId taskId);
 

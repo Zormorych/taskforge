@@ -1,0 +1,106 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.pdropalazn:taskforge:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.postgresql:postgresql:jar -> duplicate declaration of version (?) @ line 55, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ----------------------< com.pdropalazn:taskforge >----------------------
+[INFO] Building Taskforge 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.2:run (default-cli) > test-compile @ taskforge >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ taskforge ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ taskforge ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ taskforge ---
+[INFO] skip non existing resourceDirectory C:\Users\Pedro\Desktop\IntelliJ Projects\Spring\TaskForge\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ taskforge ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 6 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] <<< spring-boot:3.3.2:run (default-cli) < test-compile @ taskforge <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.2:run (default-cli) @ taskforge ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2026-04-06T20:46:56.993+02:00  INFO 43080 --- [taskforge] [           main] c.p.taskforge.TaskForgeApplication       : Starting TaskForgeApplication using Java 21.0.10 with PID 43080 (C:\Users\Pedro\Desktop\IntelliJ Projects\Spring\TaskForge\target\classes started by Pedro in C:\Users\Pedro\Desktop\IntelliJ Projects\Spring\TaskForge)
+2026-04-06T20:46:56.996+02:00  INFO 43080 --- [taskforge] [           main] c.p.taskforge.TaskForgeApplication       : The following 1 profile is active: "jpa"
+2026-04-06T20:46:57.680+02:00  INFO 43080 --- [taskforge] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-06T20:46:57.743+02:00  INFO 43080 --- [taskforge] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 2 JPA repository interfaces.
+2026-04-06T20:46:58.188+02:00  INFO 43080 --- [taskforge] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-04-06T20:46:58.200+02:00  INFO 43080 --- [taskforge] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-06T20:46:58.201+02:00  INFO 43080 --- [taskforge] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-06T20:46:58.251+02:00  INFO 43080 --- [taskforge] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-06T20:46:58.251+02:00  INFO 43080 --- [taskforge] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1219 ms
+2026-04-06T20:46:58.378+02:00  INFO 43080 --- [taskforge] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-06T20:46:58.427+02:00  INFO 43080 --- [taskforge] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-06T20:46:58.459+02:00  INFO 43080 --- [taskforge] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-06T20:46:58.734+02:00  INFO 43080 --- [taskforge] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-06T20:46:58.758+02:00  INFO 43080 --- [taskforge] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-06T20:46:58.889+02:00  INFO 43080 --- [taskforge] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2e2b9f53
+2026-04-06T20:46:58.891+02:00  INFO 43080 --- [taskforge] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-06T20:46:59.685+02:00  INFO 43080 --- [taskforge] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    create table projects (
+        id uuid not null,
+        description varchar(1000),
+        name varchar(255) not null,
+        primary key (id)
+    )
+2026-04-06T20:46:59.752+02:00  INFO 43080 --- [taskforge] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-06T20:46:59.996+02:00  WARN 43080 --- [taskforge] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-06T20:47:00.267+02:00  INFO 43080 --- [taskforge] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-04-06T20:47:00.275+02:00  INFO 43080 --- [taskforge] [           main] c.p.taskforge.TaskForgeApplication       : Started TaskForgeApplication in 3.631 seconds (process running for 3.908)
+2026-04-06T20:47:10.205+02:00  INFO 43080 --- [taskforge] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-06T20:47:10.207+02:00  INFO 43080 --- [taskforge] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-06T20:47:10.208+02:00  INFO 43080 --- [taskforge] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: 
+    select
+        pe1_0.id,
+        pe1_0.description,
+        pe1_0.name 
+    from
+        projects pe1_0 
+    where
+        pe1_0.id=?
+Hibernate: 
+    insert 
+    into
+        projects
+        (description, name, id) 
+    values
+        (?, ?, ?)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.437 s
+[INFO] Finished at: 2026-04-06T20:47:10+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.2:run (default-cli) on project taskforge: Process terminated with exit code: -1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

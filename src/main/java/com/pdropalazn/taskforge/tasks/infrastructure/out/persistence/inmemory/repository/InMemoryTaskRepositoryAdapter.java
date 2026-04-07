@@ -7,6 +7,7 @@ import com.pdropalazn.taskforge.tasks.domain.port.repository.TaskRepositoryPort;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
@@ -24,6 +25,13 @@ public class InMemoryTaskRepositoryAdapter implements TaskRepositoryPort {
         temporalStorage.put(task.getTaskId(),task);
         return task;
     }
+
+    @Override
+    public List<Task> findAll() {
+        // GetAllTasks: returns every task currently stored in memory
+        return temporalStorage.values().stream().toList();
+    }
+
     @Override
     public Optional<Task> findById(TaskId taskId) {
         return Optional.ofNullable(temporalStorage.get(taskId));

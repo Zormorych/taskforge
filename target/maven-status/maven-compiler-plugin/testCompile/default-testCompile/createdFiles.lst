@@ -1,0 +1,3 @@
+com\pdropalazn\taskforge\tasks\application\service\GetAllTasksServiceTest.class
+com\pdropalazn\taskforge\tasks\application\service\DeleteTaskServiceTest.class
+com\pdropalazn\taskforge\tasks\application\service\UpdateTaskServiceTest.class

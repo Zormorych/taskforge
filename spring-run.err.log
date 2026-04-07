@@ -1,0 +1,20 @@
+=in-memory : El t‚rmino '=in-memory' no se reconoce como nombre de un cmdlet, funci¢n, archivo de script o programa 
+ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta de acceso, compruebe que dicha ruta 
+es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 1
++ ='in-memory'; ='org.springframework.boot.autoconfigure.jdbc.DataSourc ...
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (=in-memory:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,org.springframework.boot.autoconfigure.orm.jpa
+.HibernateJpaAutoConfiguration : El t‚rmino '=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,o
+rg.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration' no se reconoce como nombre de un cmdlet, 
+funci¢n, archivo de script o programa ejecutable. Compruebe si escribi¢ correctamente el nombre o, si incluy¢ una ruta 
+de acceso, compruebe que dicha ruta es correcta e int‚ntelo de nuevo.
+En l¡nea: 1 Car cter: 15
++ ... in-memory'; ='org.springframework.boot.autoconfigure.jdbc.DataSourceA ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (=org.springfram...toConfiguration:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 

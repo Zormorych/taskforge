@@ -25,4 +25,6 @@ tengo que añadir mapper dedicados para evitar mapper manual en controller
 manejo global de excepciones de dominio
 
 ------------------------
-tengo que añadir GetAll
+tengo que añadir GetAllByUserIdUseCase para obtener todas las tareas de un usuario
+------------------------
+// devolver mensaje una vez borra task
