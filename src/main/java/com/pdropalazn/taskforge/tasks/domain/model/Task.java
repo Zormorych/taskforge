@@ -101,7 +101,6 @@ public class Task {
         this.priority = newPriority;
     }
 
-    // Added for update task feature
     public void changeDueDate(LocalDateTime newDueDate){
         this.dueDate = newDueDate;
     }
@@ -110,8 +109,7 @@ public class Task {
         this.userAssignedId = userAssignedId;
     }
 
-    // Added for update task feature
-    // Updates editable task fields while keeping the same task identity.
+
     public void updateDetails(TaskTitle newTitle, TaskDescription newDescription,
                               TaskPriority newPriority, LocalDateTime newDueDate,
                               UserId newAssigneeId) {

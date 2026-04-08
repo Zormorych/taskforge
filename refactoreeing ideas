@@ -7,17 +7,10 @@ Ideas de refactorizacion que se me ocurran:
 - En dominio, entidad Task metodo TaskId create tal vez deberia generar el UUID fuera
 - He puesto el metodo  crate la entidad task para obligar a que Task siempre se cree desde con las reglas definidas en dominio
 
-------------------------------------------------
-IDEAS CASOS DE USO
-ChangeTaskStatus
 
 -----------------------------------
 TENGO QUE AÑADIR
 ResourceNotFoundException al service por si falla
-
-En TaskRepositoryPort
-
-añadir GetTaskByIdUseCase
 
 --------------------------
 tengo que añadir mapper dedicados para evitar mapper manual en controller
@@ -25,6 +18,7 @@ tengo que añadir mapper dedicados para evitar mapper manual en controller
 manejo global de excepciones de dominio
 
 ------------------------
-tengo que añadir GetAllByUserIdUseCase para obtener todas las tareas de un usuario
 ------------------------
-// devolver mensaje una vez borra task
+- En TaskController, en vez de recibir un DTO con el id y el nuevo estado,
+recibir un DTO con el id y el nuevo estado, y luego crear un nuevo DTO para pasar
+al service, asi evito acoplar el DTO del controller con el del service
